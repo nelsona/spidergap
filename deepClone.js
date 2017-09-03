@@ -1,6 +1,3 @@
-const testObject = {name: 'Paddy', address: {town: 'Lerum', country: 'Sweden'}}
-const testObjectIncludingArray = {name: 'Paddy', address: {town: 'Lerum', country: 'Sweden'}, siblings: ['John']}
-
 const deepClone = (objectToClone) => {
   let clone = {}
   for (let key in objectToClone) {
@@ -23,10 +20,5 @@ const deepClone = (objectToClone) => {
   return clone
 }
 
-console.log(deepClone(testObject))
-console.log(deepClone(testObjectIncludingArray))
+module.exports = deepClone
 
-console.log(testObject === testObject)
-console.log(testObject === deepClone(testObject))
-console.log(testObjectIncludingArray === testObjectIncludingArray)
-console.log(testObjectIncludingArray === deepClone(testObjectIncludingArray))
